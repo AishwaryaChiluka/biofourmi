@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+<TextView
+    android:id="@+id/tv_date"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/guideline_right"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:text="22/2/22"
+    style="@style/noramlText"
+    android:padding="10dp"
+    android:layout_marginTop="40dp"
+    />
+    <TextView
+        android:id="@+id/tv_morninig_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        android:padding="10dp"
+        tools:text="Good Morning"
+        style="@style/noramlText"
+        />
+    <TextView
+        android:id="@+id/tv_afternoon_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_morninig_greeting"
+        android:padding="10dp"
+        tools:text="Good Morning"
+        style="@style/noramlText"
+        />
+    <TextView
+        android:id="@+id/tv_evening_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_afternoon_greeting"
+        android:padding="10dp"
+        tools:text="Good Morning"
+        style="@style/noramlText"
+        />
+    <TextView
+    android:id="@+id/tv_morninig_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_morninig_greeting"
+    app:layout_constraintTop_toBottomOf="@id/tv_date"
+    android:padding="10dp"
+    tools:text="11:00 PM"
+    style="@style/noramlText"
+    />
+    <TextView
+        android:id="@+id/tv_afternoon_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_afternoon_greeting"
+        app:layout_constraintTop_toBottomOf="@id/tv_morninig_time"
+        android:padding="10dp"
+        tools:text="11:00 PM"
+        style="@style/noramlText"
+        />
+    <TextView
+        android:id="@+id/tv_evening_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_evening_greeting"
+        app:layout_constraintTop_toBottomOf="@id/tv_afternoon_time"
+        android:padding="10dp"
+        tools:text="11:00 PM"
+        style="@style/noramlText"
+        />
+
+    <TextView
+        android:id="@+id/score"
+        style="@style/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toEndOf="@id/tv_afternoon_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        tools:text="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

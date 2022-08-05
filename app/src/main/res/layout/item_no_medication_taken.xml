@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+    <TextView
+        android:id="@+id/tv_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="22/2/22"
+        style="@style/noramlText"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/score"
+        style="@style/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/no_medicine_taken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:padding="40dp"
+        app:layout_constraintEnd_toEndOf="@id/score"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        tools:text="No Medicine Taken" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/currentDayMedicationFragment">
+
+    <fragment
+        android:id="@+id/currentDayMedicationFragment"
+        android:name="com.example.assessment.CurrentDayMedicationFragment"
+        android:label="CurrentDayMedicationFragment" >
+        <action
+            android:id="@+id/action_currentDayMedicationFragment_to_medicationHistoryFragment"
+            app:destination="@id/medicationHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicationHistoryFragment"
+        android:name="com.example.assessment.MedicationHistoryFragment"
+        android:label="fragment_medication_history"
+        tools:layout="@layout/fragment_medication_history" />
+</navigation>
