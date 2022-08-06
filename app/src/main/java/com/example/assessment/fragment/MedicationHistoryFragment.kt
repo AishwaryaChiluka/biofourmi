@@ -1,4 +1,4 @@
-package com.example.assessment
+package com.example.assessment.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.assessment.MedicationDetails
+import com.example.assessment.MedicationViewModel
 import com.example.assessment.adapter.MedicationHistoryAdapter
 import com.example.assessment.databinding.FragmentMedicationHistoryBinding
 import java.util.ArrayList

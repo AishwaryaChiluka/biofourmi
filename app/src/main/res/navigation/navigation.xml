@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/medicationHistoryFragment"
-        android:name="com.example.assessment.MedicationHistoryFragment"
+        android:name="com.example.assessment.fragment.MedicationHistoryFragment"
         android:label="fragment_medication_history"
         tools:layout="@layout/fragment_medication_history" />
 </navigation>
