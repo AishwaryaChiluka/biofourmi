@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="History"
+            type="com.example.assessment.MedicationDetails" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="30dp" />
+        app:layout_constraintGuide_begin="10dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="30dp" />
+        app:layout_constraintGuide_end="10dp" />
 
 <TextView
     android:id="@+id/tv_date"
@@ -27,7 +34,8 @@
     tools:text="22/2/22"
     style="@style/noramlText"
     android:padding="10dp"
-    android:layout_marginTop="40dp"
+    android:layout_marginTop="20dp"
+    android:text="@{History.date}"
     />
     <TextView
         android:id="@+id/tv_morninig_greeting"
@@ -38,6 +46,7 @@
         android:padding="10dp"
         tools:text="Good Morning"
         style="@style/noramlText"
+        android:visibility="gone"
         />
     <TextView
         android:id="@+id/tv_afternoon_greeting"
@@ -48,6 +57,7 @@
         android:padding="10dp"
         tools:text="Good Morning"
         style="@style/noramlText"
+        android:visibility="gone"
         />
     <TextView
         android:id="@+id/tv_evening_greeting"
@@ -58,6 +68,7 @@
         android:padding="10dp"
         tools:text="Good Morning"
         style="@style/noramlText"
+        android:visibility="gone"
         />
     <TextView
     android:id="@+id/tv_morninig_time"
@@ -68,6 +79,7 @@
     android:padding="10dp"
     tools:text="11:00 PM"
     style="@style/noramlText"
+        android:visibility="gone"
     />
     <TextView
         android:id="@+id/tv_afternoon_time"
@@ -78,6 +90,7 @@
         android:padding="10dp"
         tools:text="11:00 PM"
         style="@style/noramlText"
+        android:visibility="gone"
         />
     <TextView
         android:id="@+id/tv_evening_time"
@@ -88,6 +101,7 @@
         android:padding="10dp"
         tools:text="11:00 PM"
         style="@style/noramlText"
+        android:visibility="gone"
         />
 
     <TextView
@@ -96,10 +110,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="@{History.score.toString()}"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toEndOf="@id/tv_afternoon_time"
         app:layout_constraintTop_toBottomOf="@+id/tv_date"
         tools:text="0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

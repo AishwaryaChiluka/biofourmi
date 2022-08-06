@@ -10,7 +10,6 @@ import androidx.core.app.NotificationManagerCompat
 class NotificationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, p1: Intent?) {
-        // Create an explicit intent for an Activity in your app
         val intent = Intent(context, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
@@ -18,14 +17,12 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val builder = NotificationCompat.Builder(context,"2")
             .setSmallIcon(R.drawable.ic_launcher_background)
-            .setContentTitle("My notification")
-            .setContentText("Hello World!")
+            .setContentTitle("Medicine Reminder")
+            .setContentText("Hello ! This is reminder to take you Medicine")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            // Set the intent that will fire when the user taps the notification
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
         with(NotificationManagerCompat.from(context)) {
-            // notificationId is a unique int for each notification that you must define
             notify(1, builder.build())
         }
 
